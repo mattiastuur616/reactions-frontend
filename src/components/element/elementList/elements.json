@@ -1,0 +1,592 @@
+[
+    {
+        "number": 1,
+        "symbol": "H",
+        "name": "Vesinik"
+    },
+    {
+        "number": 2,
+        "symbol": "He",
+        "name": "Heelium"
+    },
+    {
+        "number": 3,
+        "symbol": "Li",
+        "name": "Liitium"
+    },
+    {
+        "number": 4,
+        "symbol": "Be",
+        "name": "Berüllium"
+    },
+    {
+        "number": 5,
+        "symbol": "B",
+        "name": "Boor"
+    },
+    {
+        "number": 6,
+        "symbol": "C",
+        "name": "Süsinik"
+    },
+    {
+        "number": 7,
+        "symbol": "N",
+        "name": "Lämmastik"
+    },
+    {
+        "number": 8,
+        "symbol": "O",
+        "name": "Hapnik"
+    },
+    {
+        "number": 9,
+        "symbol": "F",
+        "name": "Fluor"
+    },
+    {
+        "number": 10,
+        "symbol": "Ne",
+        "name": "Neoon"
+    },
+    {
+        "number": 11,
+        "symbol": "Na",
+        "name": "Naatrium"
+    },
+    {
+        "number": 12,
+        "symbol": "Mg",
+        "name": "Magneesium"
+    },
+    {
+        "number": 13,
+        "symbol": "Al",
+        "name": "Allumiinium"
+    },
+    {
+        "number": 14,
+        "symbol": "Si",
+        "name": "Räni"
+    },
+    {
+        "number": 15,
+        "symbol": "P",
+        "name": "Fosfor"
+    },
+    {
+        "number": 16,
+        "symbol": "S",
+        "name": "Väävel"
+    },
+    {
+        "number": 17,
+        "symbol": "Cl",
+        "name": "Kloor"
+    },
+    {
+        "number": 18,
+        "symbol": "Ar",
+        "name": "Argoon"
+    },
+    {
+        "number": 19,
+        "symbol": "K",
+        "name": "Kaalium"
+    },
+    {
+        "number": 20,
+        "symbol": "Ca",
+        "name": "Kaltsium"
+    },
+    {
+        "number": 21,
+        "symbol": "Sc",
+        "name": "Skandium"
+    },
+    {
+        "number": 22,
+        "symbol": "Ti",
+        "name": "Titaan"
+    },
+    {
+        "number": 23,
+        "symbol": "V",
+        "name": "Vanaadium"
+    },
+    {
+        "number": 24,
+        "symbol": "Cr",
+        "name": "Kroom"
+    },
+    {
+        "number": 25,
+        "symbol": "Mn",
+        "name": "Mangaan"
+    },
+    {
+        "number": 26,
+        "symbol": "Fe",
+        "name": "Raud"
+    },
+    {
+        "number": 27,
+        "symbol": "Co",
+        "name": "Koobalt"
+    },
+    {
+        "number": 28,
+        "symbol": "Ni",
+        "name": "Nikkel"
+    },
+    {
+        "number": 29,
+        "symbol": "Cu",
+        "name": "Vask"
+    },
+    {
+        "number": 30,
+        "symbol": "Zn",
+        "name": "Tsink"
+    },
+    {
+        "number": 31,
+        "symbol": "Ga",
+        "name": "Gallium"
+    },
+    {
+        "number": 32,
+        "symbol": "Ge",
+        "name": "Germaanium"
+    },
+    {
+        "number": 33,
+        "symbol": "As",
+        "name": "Arseen"
+    },
+    {
+        "number": 34,
+        "symbol": "Se",
+        "name": "Seleen"
+    },
+    {
+        "number": 35,
+        "symbol": "Br",
+        "name": "Broom"
+    },
+    {
+        "number": 36,
+        "symbol": "Kr",
+        "name": "Krüptoon"
+    },
+    {
+        "number": 37,
+        "symbol": "Rb",
+        "name": "Rubiidium"
+    },
+    {
+        "number": 38,
+        "symbol": "Sr",
+        "name": "Strontsium"
+    },
+    {
+        "number": 39,
+        "symbol": "Y",
+        "name": "Ütrium"
+    },
+    {
+        "number": 40,
+        "symbol": "Zr",
+        "name": "Tsirkoonium"
+    },
+    {
+        "number": 41,
+        "symbol": "Nb",
+        "name": "Nioobium"
+    },
+    {
+        "number": 42,
+        "symbol": "Mo",
+        "name": "Molübdeen"
+    },
+    {
+        "number": 43,
+        "symbol": "Tc",
+        "name": "Tehneetsium"
+    },
+    {
+        "number": 44,
+        "symbol": "Ru",
+        "name": "Ruteenium"
+    },
+    {
+        "number": 45,
+        "symbol": "Rh",
+        "name": "Roodium"
+    },
+    {
+        "number": 46,
+        "symbol": "Pd",
+        "name": "Pallaadium"
+    },
+    {
+        "number": 47,
+        "symbol": "Ag",
+        "name": "Hõbe"
+    },
+    {
+        "number": 48,
+        "symbol": "Cd",
+        "name": "Kaadmium"
+    },
+    {
+        "number": 49,
+        "symbol": "In",
+        "name": "Indium"
+    },
+    {
+        "number": 50,
+        "symbol": "Sn",
+        "name": "Tina"
+    },
+    {
+        "number": 51,
+        "symbol": "Sb",
+        "name": "Antimon"
+    },
+    {
+        "number": 52,
+        "symbol": "Te",
+        "name": "Telluur"
+    },
+    {
+        "number": 53,
+        "symbol": "I",
+        "name": "Jood"
+    },
+    {
+        "number": 54,
+        "symbol": "Xe",
+        "name": "Ksenoon"
+    },
+    {
+        "number": 55,
+        "symbol": "Cs",
+        "name": "Tseesium"
+    },
+    {
+        "number": 56,
+        "symbol": "Ba",
+        "name": "Baarium"
+    },
+    {
+        "number": 57,
+        "symbol": "La",
+        "name": "Lantaan"
+    },
+    {
+        "number": 58,
+        "symbol": "Ce",
+        "name": "Tseerium"
+    },
+    {
+        "number": 59,
+        "symbol": "Pr",
+        "name": "Praseodüüm"
+    },
+    {
+        "number": 60,
+        "symbol": "Nd",
+        "name": "Neodüüm"
+    },
+    {
+        "number": 61,
+        "symbol": "Pm",
+        "name": "Promeetium"
+    },
+    {
+        "number": 62,
+        "symbol": "Sm",
+        "name": "Samaarium"
+    },
+    {
+        "number": 63,
+        "symbol": "Eu",
+        "name": "Euroopium"
+    },
+    {
+        "number": 64,
+        "symbol": "Gd",
+        "name": "Gadoliinium"
+    },
+    {
+        "number": 65,
+        "symbol": "Tb",
+        "name": "Terbium"
+    },
+    {
+        "number": 66,
+        "symbol": "Dy",
+        "name": "Düsproosium"
+    },
+    {
+        "number": 67,
+        "symbol": "Ho",
+        "name": "Holmium"
+    },
+    {
+        "number": 68,
+        "symbol": "Er",
+        "name": "Erbium"
+    },
+    {
+        "number": 69,
+        "symbol": "Tm",
+        "name": "Tuulium"
+    },
+    {
+        "number": 70,
+        "symbol": "Yb",
+        "name": "Üterbium"
+    },
+    {
+        "number": 71,
+        "symbol": "Lu",
+        "name": "Luteetsium"
+    },
+    {
+        "number": 72,
+        "symbol": "Hf",
+        "name": "Hafnium"
+    },
+    {
+        "number": 73,
+        "symbol": "Ta",
+        "name": "Tantaal"
+    },
+    {
+        "number": 74,
+        "symbol": "W",
+        "name": "Volfram"
+    },
+    {
+        "number": 75,
+        "symbol": "Re",
+        "name": "Reenium"
+    },
+    {
+        "number": 76,
+        "symbol": "Os",
+        "name": "Osmium"
+    },
+    {
+        "number": 77,
+        "symbol": "Ir",
+        "name": "Iriidium"
+    },
+    {
+        "number": 78,
+        "symbol": "Pt",
+        "name": "Plaatina"
+    },
+    {
+        "number": 79,
+        "symbol": "Au",
+        "name": "Kuld"
+    },
+    {
+        "number": 80,
+        "symbol": "Hg",
+        "name": "Elavhõbe"
+    },
+    {
+        "number": 81,
+        "symbol": "Tl",
+        "name": "Tallium"
+    },
+    {
+        "number": 82,
+        "symbol": "Pb",
+        "name": "Plii"
+    },
+    {
+        "number": 83,
+        "symbol": "Bi",
+        "name": "Vismut"
+    },
+    {
+        "number": 84,
+        "symbol": "Po",
+        "name": "Poloonium"
+    },
+    {
+        "number": 85,
+        "symbol": "At",
+        "name": "Astaat"
+    },
+    {
+        "number": 86,
+        "symbol": "Rn",
+        "name": "Radoon"
+    },
+    {
+        "number": 87,
+        "symbol": "Fr",
+        "name": "Frantsium"
+    },
+    {
+        "number": 88,
+        "symbol": "Ra",
+        "name": "Raadium"
+    },
+    {
+        "number": 89,
+        "symbol": "Ac",
+        "name": "Aktiinium"
+    },
+    {
+        "number": 90,
+        "symbol": "Th",
+        "name": "Toorium"
+    },
+    {
+        "number": 91,
+        "symbol": "Pa",
+        "name": "Protaktiinium"
+    },
+    {
+        "number": 92,
+        "symbol": "U",
+        "name": "Uraan"
+    },
+    {
+        "number": 93,
+        "symbol": "Np",
+        "name": "Neptuunium"
+    },
+    {
+        "number": 94,
+        "symbol": "Pu",
+        "name": "Plutoonium"
+    },
+    {
+        "number": 95,
+        "symbol": "Am",
+        "name": "Ameriitsium"
+    },
+    {
+        "number": 96,
+        "symbol": "Cm",
+        "name": "Kuurium"
+    },
+    {
+        "number": 97,
+        "symbol": "Bk",
+        "name": "Berkeelium"
+    },
+    {
+        "number": 98,
+        "symbol": "Cf",
+        "name": "Kalifornium"
+    },
+    {
+        "number": 99,
+        "symbol": "Es",
+        "name": "Einsteinium"
+    },
+    {
+        "number": 100,
+        "symbol": "Fm",
+        "name": "Fermium"
+    },
+    {
+        "number": 101,
+        "symbol": "Md",
+        "name": "Mendeleevium"
+    },
+    {
+        "number": 102,
+        "symbol": "No",
+        "name": "Nobeelium"
+    },
+    {
+        "number": 103,
+        "symbol": "Lr",
+        "name": "Lavrentsium"
+    },
+    {
+        "number": 104,
+        "symbol": "Rf",
+        "name": "Rutherfordium"
+    },
+    {
+        "number": 105,
+        "symbol": "Db",
+        "name": "Dubnium"
+    },
+    {
+        "number": 106,
+        "symbol": "Sg",
+        "name": "Seaborgium"
+    },
+    {
+        "number": 107,
+        "symbol": "Bh",
+        "name": "Bohrium"
+    },
+    {
+        "number": 108,
+        "symbol": "Hs",
+        "name": "Hassium"
+    },
+    {
+        "number": 109,
+        "symbol": "Mt",
+        "name": "Meitneerium"
+    },
+    {
+        "number": 110,
+        "symbol": "Ds",
+        "name": "Darmstadtium"
+    },
+    {
+        "number": 111,
+        "symbol": "Rg",
+        "name": "Röntgeenium"
+    },
+    {
+        "number": 112,
+        "symbol": "Cn",
+        "name": "Koperniikium"
+    },
+    {
+        "number": 113,
+        "symbol": "Nh",
+        "name": "Nihoonium"
+    },
+    {
+        "number": 114,
+        "symbol": "Fl",
+        "name": "Fleroovium"
+    },
+    {
+        "number": 115,
+        "symbol": "Mc",
+        "name": "Moskoovium"
+    },
+    {
+        "number": 116,
+        "symbol": "Lv",
+        "name": "Livermoorium"
+    },
+    {
+        "number": 117,
+        "symbol": "Ts",
+        "name": "Tennessiin"
+    },
+    {
+        "number": 118,
+        "symbol": "Og",
+        "name": "Oganessoon"
+    }
+]

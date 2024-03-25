@@ -1,0 +1,46 @@
+.reactions__reactionEvent {
+    display: flex;
+    flex-direction: column;
+}
+
+.reactions__reactionEvent-operation {
+    display: flex;
+    flex-direction: row;
+}
+
+.reactions__reactionEvent-element {
+    margin-top: 10rem;
+    margin-right: 4rem;
+
+    color: blueviolet;
+    background: rgb(159, 166, 248);
+
+    width: 15rem;
+    height: 15rem;
+
+    border-radius: 10rem;
+
+    font-size: 70px;
+}
+
+.reactions__reactionEvent-element:first-child {
+    margin-left: 4rem;
+}
+
+.reactions__reactionEvent-connector {
+    margin-top: 10rem;
+    margin-right: 4rem;
+
+    font-size: 70px;
+}
+
+.reactions__reactionEvent-result_button {
+    margin-top: 10rem;
+    font-size: 70px;
+
+    cursor: pointer;
+}
+
+.reactions__reactionEvent-instruction {
+    margin-top: 60px;
+}
