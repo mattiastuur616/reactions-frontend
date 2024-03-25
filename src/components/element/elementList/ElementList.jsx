@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import elements from './elements.json';
+import React, { useState } from 'react';
 import ElementBar from '../elementBar/ElementBar';
 import './elementList.css';
 
@@ -52,7 +52,7 @@ const ElementList = () => {
     return (
         <div className='reactions__elementList'>
             <input type='text' name='search' placeholder='Otsi elementi' value={search} onChange={handleChange}/>
-            <div>
+            <div className='reactions__elementList-elements'>
                 <FilteredElements />
             </div>
         </div>

@@ -1,7 +1,14 @@
 .reactions__elementList {
     background: linear-gradient(88deg, rgba(15, 255, 0, 1) 26%, rgba(237, 255, 14, 1) 100%);
+    
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.reactions__elementList-elements {
+    height: 34rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .reactions__elementList input {
