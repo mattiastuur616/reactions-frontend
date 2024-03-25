@@ -1,0 +1,24 @@
+.reactions__elementList {
+    background: linear-gradient(88deg, rgba(15, 255, 0, 1) 26%, rgba(237, 255, 14, 1) 100%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.reactions__elementList input {
+    color: rgb(206, 206, 206);
+    background: linear-gradient(0deg, rgba(0, 22, 255, 1) 0%, rgba(14, 249, 255, 1) 100%);
+
+    width: 20rem;
+    height: 3rem;
+
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    border-radius: 5rem;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reactions__elementList input::placeholder {
+    color: rgb(206, 206, 206);
+}
