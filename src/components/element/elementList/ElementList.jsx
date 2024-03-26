@@ -51,7 +51,9 @@ const ElementList = () => {
 
     return (
         <div className='reactions__elementList'>
-            <input type='text' name='search' placeholder='Otsi elementi' value={search} onChange={handleChange}/>
+            <div className='reaction__elementList-searchBar'>
+                <input type='text' name='search' placeholder='Otsi elementi' value={search} onChange={handleChange}/>
+            </div>
             <div className='reactions__elementList-elements'>
                 <FilteredElements />
             </div>
