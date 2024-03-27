@@ -57,11 +57,14 @@
 
 .reactions__reactionEvent-result_button {
     margin-top: 10rem;
+    margin-right: 4rem;
     font-size: 70px;
 
     cursor: pointer;
 }
 
-.reactions__reactionEvent-instruction {
-    margin-top: 60px;
+.reactions__reactionEvent-error {
+    margin-top: 2rem;
+    margin-bottom: 1px;
+    color: red;
 }
