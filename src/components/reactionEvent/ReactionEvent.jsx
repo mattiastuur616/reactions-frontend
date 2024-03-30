@@ -3,86 +3,248 @@ import React, { useState } from 'react';
 import reactions from './reactions.json';
 import './reactionEvent.css';
 
+localStorage.setItem(1, "+");
+localStorage.setItem(2, "+");
+
+const operatorsList = [{
+        index: 1,
+        allSymbols: []
+    },
+    {
+        index: 2,
+        allSymbols: []
+    }
+];
+
 const ReactionEvent = () => {
     var arrow = '=>';
     var backArrow = '<=';
 
+    const Element = (index) => {
+        const [symbol, setSymbol] = useState(localStorage.getItem(`${index.index}`));
+
+        let correctColor = "";
+        if (symbol === "+") {
+            correctColor = "reactions__reactionEvent-element_default";
+        } else {
+            correctColor = "reactions__reactionEvent-element_specified";
+        }
+        
+        const [bgColor, setBgColor] = useState(correctColor);
+
+        const [storedElements, setStoredElements] = useState([]);
+
+        const changeValue = () => {
+            if (localStorage.getItem("symbol") !== null) {
+                if (symbol === "+") {
+                    setSymbol(localStorage.getItem("symbol"));
+                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol"));
+                } else {
+                    setSymbol(symbol + localStorage.getItem("symbol"));
+                    localStorage.setItem(`${index.index}`, symbol + localStorage.getItem("symbol"));
+                }
+                storedElements.push(localStorage.getItem("symbol"));
+                setBgColor("reactions__reactionEvent-element_specified");
+
+                operatorsList.map((i) => {
+                    if (i.index === index.index) {
+                        i.allSymbols.push(localStorage.getItem("symbol"));
+                    }
+                    return (
+                        <></>
+                    )
+                })
+
+                localStorage.removeItem("symbol");
+            }
+        }
+
+        const clearValue = () => {
+            setSymbol("+");
+            setBgColor("reactions__reactionEvent-element_default");
+            setErrorMsg("");
+            setStoredElements([]);
+            localStorage.setItem(`${index.index}`, "+");
+
+            operatorsList.map((i) => {
+                if (i.index === index.index) {
+                    i.allSymbols.splice(0, i.allSymbols.length);
+                }
+                return (
+                    <></>
+                )
+            })
+        }
+
+        return (
+            <div className={bgColor}
+            onClick={clearValue} 
+            onMouseUp={changeValue}>
+                <p>{symbol}</p>
+            </div>
+        )
+    }
+
+    const RenderElements = () => {
+        return (
+            <div className='reactions__reactionEvent-operation'>
+                {operatorsList.map((i) => {
+                    if (i.index === 1) {
+                        return (
+                            <div key={i.index}>
+                                <Element index={i.index}/>
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div key={i.index} className='reactions__reactionEvent-operation'>
+                                <div className='reactions__reactionEvent-connector'>
+                                    <p>+</p>
+                                </div>
+                                <Element index={i.index}/>
+                            </div>
+                        )
+                    }
+                })}
+                <div className='reactions__reactionEvent-result_button'>
+                    <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={PerformReaction}>{arrow}</motion.p>
+                </div>
+            </div>
+        )
+    }
+
     const [pageStatus, setPageStatus] = useState("start");
-
-    const [elementSymbol1, setElementSymbol1] = useState("+");
-    const [elementColor1, setElementColor1] = useState("reactions__reactionEvent-element_default")
-
-    const [elementSymbol2, setElementSymbol2] = useState("+");
-    const [elementColor2, setElementColor2] = useState("reactions__reactionEvent-element_default")
-
     const [errorMsg, setErrorMsg] = useState("");
-
-    const [explanation, setExplanation] = useState("");
-    const [result1, setResult1] = useState("");
-    const [result2, setResult2] = useState("");
 
     const [animOpacity, setAnimOpacity] = useState(1);
     const [animX, setAnimX] = useState(0);
 
-    const changeElement1 = () => {
-        if (localStorage.getItem("symbol") !== null) {
-            if (elementSymbol1 === "+") {
-                setElementSymbol1(localStorage.getItem("symbol"));
-            } else {
-                setElementSymbol1(elementSymbol1 + localStorage.getItem("symbol"));
-            }
-            setElementColor1("reactions__reactionEvent-element_specified");
-            localStorage.removeItem("symbol");
-        }
+    const [allReactions, setAllReactions] = useState([]);
+    const [allResults, setAllResults] = useState([]);
+    const [finalResult, setFinalResult] = useState([]);
 
-        setAnimOpacity(1);
-        setAnimX(0);
-        setErrorMsg("");
-    }
-
-    const changeElement2 = () => {
-        if (localStorage.getItem("symbol") !== null) {
-            if (elementSymbol2 === "+") {
-                setElementSymbol2(localStorage.getItem("symbol"));
-            } else {
-                setElementSymbol2(elementSymbol2 + localStorage.getItem("symbol"));
-            }
-            setElementColor2("reactions__reactionEvent-element_specified");
-            localStorage.removeItem("symbol");
-        }
-
-        setAnimOpacity(1);
-        setAnimX(0);
-        setErrorMsg("");
-    }
-
-    const showResult = () => {
-        reactions.map((reaction) => {
-            if ((reaction.element1 === elementSymbol1 || reaction.element1 === elementSymbol2) 
-            && (reaction.element2 === elementSymbol1 || reaction.element2 === elementSymbol2)) {
-                setResult1(reaction.result1);
-                setResult2(reaction.result2);
-                setExplanation(reaction.text);
-                
-                setPageStatus("finish");
-                setAnimOpacity(0);
-                setAnimX(-100);
-
-                setErrorMsg("");
-            } else {
-                setErrorMsg("Element puudu või ei eksisteeri tulemust");
+    function PerformReaction() {
+        let letItPass = true;
+        operatorsList.map((operator) => {
+            if (operator.allSymbols.length === 0) {
+                letItPass = false;
             }
             return (
                 <></>
             )
         })
+
+        if (letItPass === true) {
+            let validCandidates = 0;
+            let isCandidate = true;
+            operatorsList.map((operator) => {
+                reactions.map((reaction) => {
+                    reaction.substances.map((substance) => {
+                        isCandidate = true;
+                        substance.map((element) => {
+                            if (!operator.allSymbols.includes(element.symbol) || operator.allSymbols.length !== substance.length) {
+                                isCandidate = false;
+                            }
+                            return (
+                                <></>
+                            )
+                        })
+                        if (isCandidate === true) {
+                            validCandidates = validCandidates + 1;
+                        }
+                        return (
+                            <></>
+                        )
+                    })
+                    if (validCandidates > 0 && !allReactions.includes(reaction)) {
+                        allResults.push(reaction.results);
+                        allReactions.push(reaction);
+                    } else {
+                        setAllResults(allResults.filter((candidate) => candidate !== reaction.results));
+                        setAllReactions(allReactions.filter((r) => r !== reaction));
+                    }
+                    isCandidate = true;
+                    validCandidates = 0;
+                    return (
+                        <></>
+                    )
+                })
+                return (
+                    <></>
+                )
+            })
+            if (allResults.length > 0) {
+                allResults.map((result) => {
+                    result.map((substance) => {
+                        let sub = "";
+                        substance.map((element) => {
+                            sub = sub + element.symbol;
+                            return (
+                                <></>
+                            )
+                        })
+                        finalResult.push(sub);
+                        return (
+                            <></>
+                        )
+                    })
+                    return (
+                        <></>
+                    )
+                })
+                setPageStatus("finish");
+                setErrorMsg("");
+                setAnimX(-100);
+                setAnimOpacity(0);
+            } else {
+                setErrorMsg("Reaktsiooni ei eksisteeri");
+                setAnimX(0);
+                setAnimOpacity(1);
+            }
+        } else {
+            setErrorMsg("Reaktsiooni ei eksisteeri");
+            setAnimX(0);
+            setAnimOpacity(1);
+        } 
     }
 
-    const backToCreation = () => {
-        setResult1("");
-        setResult2("");
+    const ShowResult = () => {
+        let number = 0;
+        return (
+            <div className='reactions__reactionEvent-operation'>
+                <div className='reactions__reactionEvent-result_button'>
+                    <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={BackToCreation}>{backArrow}</motion.p>
+                </div>
 
-        setExplanation("");
+                {finalResult.map((element) => {
+                    if (number === 0) {
+                        number = number + 1;
+                        return (
+                            <div key={element} className="reactions__reactionEvent-element_specified">
+                                <p>{element}</p>
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div key={element} className='reactions__reactionEvent-operation'>
+                                <div className='reactions__reactionEvent-connector'>
+                                    <p>+</p>
+                                </div>
+
+                                <div className="reactions__reactionEvent-element_specified">
+                                    <p>{element}</p>
+                                </div>
+                            </div>
+                        )
+                    }
+                })}
+            </div>
+        )
+    }
+
+    function BackToCreation() {
+        setFinalResult([]);
+        setAllResults([]);
         setPageStatus("start");
     }
 
@@ -91,27 +253,7 @@ const ReactionEvent = () => {
             return (
                 <div className='reactions__reactionEvent'>
                     <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: animOpacity, x: animX }} transition={{ duration: 1.5 }} className='reactions__reactionEvent-operation'>
-                        <div className={elementColor1}
-                        onClick={() => {setElementSymbol1("+"); 
-                        setElementColor1("reactions__reactionEvent-element_default")}} 
-                        onMouseUp={changeElement1}>
-                            <p>{elementSymbol1}</p>
-                        </div>
-
-                        <div className='reactions__reactionEvent-connector'>
-                            <p>+</p>
-                        </div>
-
-                        <div className={elementColor2}
-                        onClick={() => {setElementSymbol2("+"); 
-                        setElementColor2("reactions__reactionEvent-element_default")}} 
-                        onMouseUp={changeElement2}>
-                            <p>{elementSymbol2}</p>
-                        </div>
-
-                        <div className='reactions__reactionEvent-result_button'>
-                            <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={showResult}>{arrow}</motion.p>
-                        </div>
+                        <RenderElements />
                     </motion.div>
 
                     <motion.div animate={{ x: 0 }} initial={{ x: -100 }} transition={{ type: "spring" }} className='reactions__reactionEvent-error'>
@@ -128,26 +270,8 @@ const ReactionEvent = () => {
             return (
                 <div className='reactions__reactionEvent'>
                     <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 100 }} transition={{ duration: 1.5 }} className='reactions__reactionEvent-operation'>
-                        <div className='reactions__reactionEvent-result_button'>
-                            <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={backToCreation}>{backArrow}</motion.p>
-                        </div>
-
-                        <div className={elementColor1}>
-                            <p>{result1}</p>
-                        </div>
-
-                        <div className='reactions__reactionEvent-connector'>
-                            <p>+</p>
-                        </div>
-
-                        <div className={elementColor1}>
-                            <p>{result2}</p>
-                        </div>
+                        <ShowResult />
                     </motion.div>
-
-                    <div className='reactions__reactionEvent-instruction'>
-                        <p>{explanation}</p>
-                    </div>
                 </div>
             )
         }
