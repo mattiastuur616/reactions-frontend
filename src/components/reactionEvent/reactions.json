@@ -1,51 +1,124 @@
 [
     {
-        "element1": "H",
-        "element2": "O",
-        "result1": "OH",
-        "result2": "O",
-        "text": "Siin on selgitus sellele reaktsioonile"
+        "substances": [
+            [
+                {
+                    "symbol": "H",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "O",
+                    "amount": 1
+                },
+                {
+                    "symbol": "H",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ]
     },
     {
-        "element1": [
-            {
-                "symbol": "Fe",
-                "amount": 1
-            }
+        "substances": [
+            [
+                {
+                    "symbol": "Fe",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "S",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 4
+                }
+            ]
         ],
-        "element2": [
-            {
-                "symbol": "H",
-                "amount": 2
-            },
-            {
-                "symbol": "S",
-                "amount": 1
-            },
-            {
-                "symbol": "O",
-                "amount": 4
-            }
+        "results": [
+            [
+                {
+                    "symbol": "Fe",
+                    "amount": 1
+                },
+                {
+                    "symbol": "S",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 4
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "C",
+                    "amount": 1
+                },
+                {
+                    "symbol": "H",
+                    "amount": 4
+                }
+            ],
+            [
+                {
+                    "symbol": "O",
+                    "amount": 2
+                }
+            ]
         ],
-        "result1": [
-            {
-                "symbol": "Fe",
-                "amount": 1
-            },
-            {
-                "symbol": "S",
-                "amount": 1
-            },
-            {
-                "symbol": "O",
-                "amount": 4
-            }
-        ],
-        "result2": [
-            {
-                "symbol": "H",
-                "amount": 2
-            }
+        "results": [
+            [
+                {
+                    "symbol": "C",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
         ]
     }
 ]

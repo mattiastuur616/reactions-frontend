@@ -17,7 +17,7 @@ const ElementList = () => {
             return (
                 <div>
                     {elements.map((element) => (
-                    <div key={element.id}>
+                    <div key={element.number}>
                         <ElementBar symbol={element.symbol} name={element.name} />
                     </div>
                     ))}
