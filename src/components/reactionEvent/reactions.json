@@ -120,5 +120,437 @@
                 }
             ]
         ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Na",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Br",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "Ca",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 2
+                },
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Ca",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Br",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "Na",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                },
+                {
+                    "symbol": "H",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "N",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "N",
+                    "amount": 1
+                },
+                {
+                    "symbol": "H",
+                    "amount": 3
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Na",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Cl",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "F",
+                    "amount": 2
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Na",
+                    "amount": 1
+                },
+                {
+                    "symbol": "F",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "Cl",
+                    "amount": 2
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 2
+                },
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Cl",
+                    "amount": 1
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Cl",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "S",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 4
+                }
+            ],
+            [
+                {
+                    "symbol": "B",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 3
+                },
+                {
+                    "symbol": "H",
+                    "amount": 3
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "B",
+                    "amount": 2
+                },
+                {
+                    "symbol": "S",
+                    "amount": 3
+                },
+                {
+                    "symbol": "O",
+                    "amount": 12
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "C",
+                    "amount": 5
+                },
+                {
+                    "symbol": "H",
+                    "amount": 9
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "O",
+                    "amount": 2
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "C",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Li",
+                    "amount": 3
+                },
+                {
+                    "symbol": "N",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "N",
+                    "amount": 1
+                },
+                {
+                    "symbol": "H",
+                    "amount": 4
+                },
+                {
+                    "symbol": "N",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 3
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Li",
+                    "amount": 1
+                },
+                {
+                    "symbol": "N",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 3
+                }
+            ],
+            [
+                {
+                    "symbol": "N",
+                    "amount": 3
+                },
+                {
+                    "symbol": "H",
+                    "amount": 12
+                },
+                {
+                    "symbol": "N",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "H",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Br",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "Al",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 3
+                },
+                {
+                    "symbol": "H",
+                    "amount": 3
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Al",
+                    "amount": 1
+                },
+                {
+                    "symbol": "Br",
+                    "amount": 3
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 3
+                },
+                {
+                    "symbol": "P",
+                    "amount": 1
+                },
+                {
+                    "symbol": "O",
+                    "amount": 4
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 3
+                },
+                {
+                    "symbol": "P",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 8
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ]
+        ]
     }
 ]

@@ -119,89 +119,84 @@ const ReactionEvent = () => {
     const [animOpacity, setAnimOpacity] = useState(1);
     const [animX, setAnimX] = useState(0);
 
-    const [allReactions, setAllReactions] = useState([]);
     const [allResults, setAllResults] = useState([]);
     const [finalResult, setFinalResult] = useState([]);
 
     function PerformReaction() {
         let letItPass = true;
+        let operatorsSize = 0;
+
         operatorsList.map((operator) => {
             if (operator.allSymbols.length === 0) {
                 letItPass = false;
             }
+            operatorsSize = operatorsSize + operator.allSymbols.length;
             return (
                 <></>
             )
         })
 
         if (letItPass === true) {
-            let validCandidates = 0;
-            let isCandidate = true;
-            operatorsList.map((operator) => {
-                reactions.map((reaction) => {
-                    reaction.substances.map((substance) => {
-                        isCandidate = true;
-                        substance.map((element) => {
-                            if (!operator.allSymbols.includes(element.symbol) || operator.allSymbols.length !== substance.length) {
-                                isCandidate = false;
+            reactions.map((reaction) => {
+                let validElements = 0;
+                let substances = 0;
+                reaction.substances.map((substance) => {
+                    substance.map((element) => {
+                        substances = substances + 1;
+                        operatorsList.map((operatior) => {
+                            if (operatior.allSymbols.includes(element.symbol) && operatior.allSymbols.length === substance.length) {
+                                validElements = validElements + 1;
                             }
                             return (
                                 <></>
                             )
                         })
-                        if (isCandidate === true) {
-                            validCandidates = validCandidates + 1;
-                        }
                         return (
                             <></>
                         )
                     })
-                    if (validCandidates > 0 && !allReactions.includes(reaction)) {
-                        allResults.push(reaction.results);
-                        allReactions.push(reaction);
-                    } else {
-                        setAllResults(allResults.filter((candidate) => candidate !== reaction.results));
-                        setAllReactions(allReactions.filter((r) => r !== reaction));
-                    }
-                    isCandidate = true;
-                    validCandidates = 0;
                     return (
                         <></>
                     )
                 })
+                if (validElements === operatorsSize && validElements === substances) {
+                    reaction.results.map((result) => {
+                        allResults.push(result);
+                        return (
+                            <></>
+                        )
+                    })
+                }
                 return (
                     <></>
                 )
             })
-            if (allResults.length > 0) {
+            if (allResults.length !== 0) {
                 allResults.map((result) => {
-                    result.map((substance) => {
-                        let sub = "";
-                        substance.map((element) => {
-                            sub = sub + element.symbol;
-                            return (
-                                <></>
-                            )
-                        })
-                        finalResult.push(sub);
+                    let symbol = "";
+                    result.map((element) => {
+                        symbol = symbol + element.symbol;
                         return (
                             <></>
                         )
                     })
+                    finalResult.push(symbol);
                     return (
                         <></>
                     )
                 })
-                setPageStatus("finish");
                 setErrorMsg("");
                 setAnimX(-100);
                 setAnimOpacity(0);
+                setPageStatus("finish");
             } else {
+                setAllResults([]);
                 setErrorMsg("Reaktsiooni ei eksisteeri");
                 setAnimX(0);
                 setAnimOpacity(1);
             }
         } else {
+            setAllResults([]);
             setErrorMsg("Reaktsiooni ei eksisteeri");
             setAnimX(0);
             setAnimOpacity(1);
