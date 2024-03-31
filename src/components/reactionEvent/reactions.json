@@ -4,13 +4,13 @@
             [
                 {
                     "symbol": "H",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "O",
-                    "amount": 1
+                    "amount": "1"
                 }
             ]
         ],
@@ -38,21 +38,21 @@
             [
                 {
                     "symbol": "Fe",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "H",
-                    "amount": 2
+                    "amount": "2"
                 },
                 {
                     "symbol": "S",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 4
+                    "amount": "4"
                 }
             ]
         ],
@@ -84,17 +84,17 @@
             [
                 {
                     "symbol": "C",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "H",
-                    "amount": 4
+                    "amount": "4"
                 }
             ],
             [
                 {
                     "symbol": "O",
-                    "amount": 2
+                    "amount": "2"
                 }
             ]
         ],
@@ -126,25 +126,25 @@
             [
                 {
                     "symbol": "Na",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "Br",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "Ca",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 2
+                    "amount": "2"
                 },
                 {
                     "symbol": "H",
-                    "amount": 2
+                    "amount": "2"
                 }
             ]
         ],
@@ -180,13 +180,13 @@
             [
                 {
                     "symbol": "N",
-                    "amount": 2
+                    "amount": "2"
                 }
             ],
             [
                 {
                     "symbol": "H",
-                    "amount": 2
+                    "amount": "2"
                 }
             ]
         ],
@@ -208,17 +208,17 @@
             [
                 {
                     "symbol": "Na",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "Cl",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "F",
-                    "amount": 2
+                    "amount": "2"
                 }
             ]
         ],
@@ -246,25 +246,25 @@
             [
                 {
                     "symbol": "Pb",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 2
+                    "amount": "2"
                 },
                 {
                     "symbol": "H",
-                    "amount": 2
+                    "amount": "2"
                 }
             ],
             [
                 {
                     "symbol": "H",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "Cl",
-                    "amount": 1
+                    "amount": "1"
                 }
             ]
         ],
@@ -296,29 +296,29 @@
             [
                 {
                     "symbol": "H",
-                    "amount": 2
+                    "amount": "2"
                 },
                 {
                     "symbol": "S",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 4
+                    "amount": "4"
                 }
             ],
             [
                 {
                     "symbol": "B",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 3
+                    "amount": "3"
                 },
                 {
                     "symbol": "H",
-                    "amount": 3
+                    "amount": "3"
                 }
             ]
         ],
@@ -354,21 +354,21 @@
             [
                 {
                     "symbol": "C",
-                    "amount": 5
+                    "amount": "5"
                 },
                 {
                     "symbol": "H",
-                    "amount": 9
+                    "amount": "9"
                 },
                 {
                     "symbol": "O",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "O",
-                    "amount": 2
+                    "amount": "2"
                 }
             ]
         ],
@@ -400,29 +400,29 @@
             [
                 {
                     "symbol": "Li",
-                    "amount": 3
+                    "amount": "3"
                 },
                 {
                     "symbol": "N",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "N",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "H",
-                    "amount": 4
+                    "amount": "4"
                 },
                 {
                     "symbol": "N",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 3
+                    "amount": "3"
                 }
             ]
         ],
@@ -462,25 +462,25 @@
             [
                 {
                     "symbol": "H",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "Br",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "Al",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 3
+                    "amount": "3"
                 },
                 {
                     "symbol": "H",
-                    "amount": 3
+                    "amount": "3"
                 }
             ]
         ],
@@ -512,21 +512,21 @@
             [
                 {
                     "symbol": "Pb",
-                    "amount": 1
+                    "amount": "1"
                 }
             ],
             [
                 {
                     "symbol": "H",
-                    "amount": 3
+                    "amount": "3"
                 },
                 {
                     "symbol": "P",
-                    "amount": 1
+                    "amount": "1"
                 },
                 {
                     "symbol": "O",
-                    "amount": 4
+                    "amount": "4"
                 }
             ]
         ],

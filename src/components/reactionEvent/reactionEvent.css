@@ -3,6 +3,31 @@
     flex-direction: column;
 
     margin-left: 4rem;
+    margin-top: 4px;
+}
+
+.reactions__reactionEvent-elementAmount {
+    display: flex;
+    flex-direction: row;
+}
+
+.reactions__reactionEvent-elementAmount input {
+    color: blueviolet;
+    background: rgb(25, 26, 34);
+
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+
+    font-size: 1.7rem;
+
+    justify-content: center;
+
+    border-style: ridge;
+    border-width: 0.5rem;
+    border-radius: 1rem;
+    border-color: rgb(159, 166, 248);
+    width: 4rem;
+    height: 2rem;
 }
 
 .reactions__reactionEvent-operation {
@@ -11,7 +36,7 @@
 }
 
 .reactions__reactionEvent-element_default {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-right: 4rem;
 
     color: blueviolet;
@@ -27,7 +52,12 @@
 }
 
 .reactions__reactionEvent-element_specified {
-    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-top: 5rem;
     margin-right: 4rem;
 
     color: white;
@@ -44,19 +74,29 @@
     cursor: pointer;
 }
 
+.reactions__reactionEvent-element_specified_pair {
+    display: flex;
+    flex-direction: row;
+}
+
+.reactions__reactionEvent-element_specified_pair-index {
+    font-size: 25px;
+    margin-top: 110px;
+}
+
 .reactions__reactionEvent-element:first-child {
     margin-left: 4rem;
 }
 
 .reactions__reactionEvent-connector {
-    margin-top: 10rem;
+    margin-top: 6rem;
     margin-right: 4rem;
 
     font-size: 70px;
 }
 
 .reactions__reactionEvent-result_button {
-    margin-top: 10rem;
+    margin-top: 6rem;
     margin-right: 4rem;
     font-size: 70px;
 

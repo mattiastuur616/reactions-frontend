@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import reactions from './reactions.json';
+import elements from '../element/elementList/elements.json';
 import './reactionEvent.css';
-
-localStorage.setItem(1, "+");
-localStorage.setItem(2, "+");
 
 const operatorsList = [{
         index: 1,
@@ -20,35 +18,50 @@ const ReactionEvent = () => {
     var arrow = '=>';
     var backArrow = '<=';
 
+    const [indexAmount, setIndexAmount] = useState("1");
+
+    const [pageStatus, setPageStatus] = useState("start");
+    const [errorMsg, setErrorMsg] = useState("");
+
+    const [animOpacity, setAnimOpacity] = useState(1);
+    const [animX, setAnimX] = useState(0);
+
+    const [allResults, setAllResults] = useState([]);
+    const [finalResult, setFinalResult] = useState([]);
+
+    const handleAmount = (e) => {
+        const value = e.target.value;
+        setIndexAmount(value);
+
+        setAnimX(0);
+        setAnimOpacity(1);
+        setErrorMsg("");
+    }
+
     const Element = (index) => {
         const [symbol, setSymbol] = useState(localStorage.getItem(`${index.index}`));
 
-        let correctColor = "";
-        if (symbol === "+") {
-            correctColor = "reactions__reactionEvent-element_default";
-        } else {
-            correctColor = "reactions__reactionEvent-element_specified";
-        }
-        
-        const [bgColor, setBgColor] = useState(correctColor);
-
-        const [storedElements, setStoredElements] = useState([]);
+        const [elementValues, setElementsValues] = useState(JSON.parse(localStorage.getItem(`savedList${index.index}`)));
 
         const changeValue = () => {
             if (localStorage.getItem("symbol") !== null) {
-                if (symbol === "+") {
-                    setSymbol(localStorage.getItem("symbol"));
-                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol"));
-                } else {
-                    setSymbol(symbol + localStorage.getItem("symbol"));
-                    localStorage.setItem(`${index.index}`, symbol + localStorage.getItem("symbol"));
+                let amountValue = indexAmount
+                if (amountValue === "1") {
+                    amountValue = "";
                 }
-                storedElements.push(localStorage.getItem("symbol"));
-                setBgColor("reactions__reactionEvent-element_specified");
+                if (localStorage.getItem(`savedList${index.index}`).length === 0) {
+                    setSymbol(amountValue);
+                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol") + amountValue);
+                } else {
+                    setSymbol(symbol + localStorage.getItem("symbol") + amountValue);
+                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol") + amountValue);
+                }
 
                 operatorsList.map((i) => {
                     if (i.index === index.index) {
-                        i.allSymbols.push(localStorage.getItem("symbol"));
+                        i.allSymbols.push({element: localStorage.getItem("symbol"), indexValue: indexAmount});
+                        window.localStorage.setItem(`savedList${index.index}`, JSON.stringify(i.allSymbols));
+                        elementValues.push({element: localStorage.getItem("symbol"), indexValue: indexAmount});
                     }
                     return (
                         <></>
@@ -60,11 +73,9 @@ const ReactionEvent = () => {
         }
 
         const clearValue = () => {
-            setSymbol("+");
-            setBgColor("reactions__reactionEvent-element_default");
+            setElementsValues([]);
             setErrorMsg("");
-            setStoredElements([]);
-            localStorage.setItem(`${index.index}`, "+");
+            window.localStorage.setItem(`savedList${index.index}`, JSON.stringify([]));
 
             operatorsList.map((i) => {
                 if (i.index === index.index) {
@@ -77,10 +88,32 @@ const ReactionEvent = () => {
         }
 
         return (
-            <div className={bgColor}
-            onClick={clearValue} 
-            onMouseUp={changeValue}>
-                <p>{symbol}</p>
+            <div>
+                {elementValues.length === 0 ? <div className="reactions__reactionEvent-element_default"
+                onClick={clearValue} 
+                onMouseUp={changeValue}><p>+</p></div> : 
+                <div className="reactions__reactionEvent-element_specified"
+                onClick={clearValue} 
+                onMouseUp={changeValue}>
+                    {elementValues.map((v) => {
+                        if (v.indexValue === "1") {
+                            return (
+                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                    <p>{v.element}</p>
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                    <p>{v.element}</p>
+                                    <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                        <p>{v.indexValue}</p>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>}
             </div>
         )
     }
@@ -113,15 +146,6 @@ const ReactionEvent = () => {
         )
     }
 
-    const [pageStatus, setPageStatus] = useState("start");
-    const [errorMsg, setErrorMsg] = useState("");
-
-    const [animOpacity, setAnimOpacity] = useState(1);
-    const [animX, setAnimX] = useState(0);
-
-    const [allResults, setAllResults] = useState([]);
-    const [finalResult, setFinalResult] = useState([]);
-
     function PerformReaction() {
         let letItPass = true;
         let operatorsSize = 0;
@@ -144,9 +168,14 @@ const ReactionEvent = () => {
                     substance.map((element) => {
                         substances = substances + 1;
                         operatorsList.map((operatior) => {
-                            if (operatior.allSymbols.includes(element.symbol) && operatior.allSymbols.length === substance.length) {
-                                validElements = validElements + 1;
-                            }
+                            operatior.allSymbols.map((o) => {
+                                if (o.element === element.symbol && o.indexValue === element.amount && operatior.allSymbols.length === substance.length) {
+                                    validElements = validElements + 1;
+                                }
+                                return (
+                                    <></>
+                                )
+                            })
                             return (
                                 <></>
                             )
@@ -173,14 +202,15 @@ const ReactionEvent = () => {
             })
             if (allResults.length !== 0) {
                 allResults.map((result) => {
-                    let symbol = "";
+                    let littleList = [];
                     result.map((element) => {
-                        symbol = symbol + element.symbol;
+                        littleList.push(element.symbol);
+                        localStorage.setItem(`index${element.symbol}`, element.amount);
                         return (
                             <></>
                         )
                     })
-                    finalResult.push(symbol);
+                    finalResult.push(littleList);
                     return (
                         <></>
                     )
@@ -211,23 +241,57 @@ const ReactionEvent = () => {
                     <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={BackToCreation}>{backArrow}</motion.p>
                 </div>
 
-                {finalResult.map((element) => {
+                {finalResult.map((elementList) => {
                     if (number === 0) {
                         number = number + 1;
                         return (
-                            <div key={element} className="reactions__reactionEvent-element_specified">
-                                <p>{element}</p>
+                            <div key={elementList} className="reactions__reactionEvent-element_specified">
+                                {elementList.map((element) => {
+                                    if (localStorage.getItem(`index${element}`) === "1") {
+                                        return (
+                                            <div className='reactions__reactionEvent-element_specified_pair'>
+                                                <p>{element}</p>
+                                            </div>
+                                        )
+                                    } else {
+                                        return (
+                                            <div className='reactions__reactionEvent-element_specified_pair'>
+                                                <p>{element}</p>
+                                                <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                                    <p>{localStorage.getItem(`index${element}`)}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                })}
                             </div>
                         )
                     } else {
                         return (
-                            <div key={element} className='reactions__reactionEvent-operation'>
+                            <div key={elementList} className='reactions__reactionEvent-operation'>
                                 <div className='reactions__reactionEvent-connector'>
                                     <p>+</p>
                                 </div>
 
                                 <div className="reactions__reactionEvent-element_specified">
-                                    <p>{element}</p>
+                                    {elementList.map((element) => {
+                                        if (localStorage.getItem(`index${element}`) === "1") {
+                                            return (
+                                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                                    <p>{element}</p>
+                                                </div>
+                                            )
+                                        } else {
+                                            return (
+                                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                                    <p>{element}</p>
+                                                    <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                                        <p>{localStorage.getItem(`index${element}`)}</p>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    })}
                                 </div>
                             </div>
                         )
@@ -238,6 +302,12 @@ const ReactionEvent = () => {
     }
 
     function BackToCreation() {
+        elements.map((element) => {
+            localStorage.removeItem(`index${element.symbol}`);
+            return (
+                <></>
+            )
+        });
         setFinalResult([]);
         setAllResults([]);
         setPageStatus("start");
@@ -247,6 +317,14 @@ const ReactionEvent = () => {
         if (pageStatus === "start") {
             return (
                 <div className='reactions__reactionEvent'>
+                    <div className='reactions__reactionEvent-elementAmount'>
+                        <p>Vali elemendi indeks</p>
+                        <div>
+                            <input type='number' min={1} name='index' value={indexAmount} onChange={handleAmount} />
+                        </div>
+                        <p>, mida järgnevalt lisatav element omandab</p>
+                    </div>
+
                     <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: animOpacity, x: animX }} transition={{ duration: 1.5 }} className='reactions__reactionEvent-operation'>
                         <RenderElements />
                     </motion.div>
