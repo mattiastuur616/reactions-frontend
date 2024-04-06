@@ -4,6 +4,9 @@ import reactions from './reactions.json';
 import elements from '../element/elementList/elements.json';
 import './reactionEvent.css';
 
+localStorage.setItem('savedList1', JSON.stringify([]));
+localStorage.setItem('savedList2', JSON.stringify([]));
+
 const operatorsList = [{
         index: 1,
         allSymbols: []
@@ -39,6 +42,7 @@ const ReactionEvent = () => {
     }
 
     const Element = (index) => {
+        let key = 0;
         const [symbol, setSymbol] = useState(localStorage.getItem(`${index.index}`));
 
         const [elementValues, setElementsValues] = useState(JSON.parse(localStorage.getItem(`savedList${index.index}`)));
@@ -96,15 +100,16 @@ const ReactionEvent = () => {
                 onClick={clearValue} 
                 onMouseUp={changeValue}>
                     {elementValues.map((v) => {
+                        key = key + 1;
                         if (v.indexValue === "1") {
                             return (
-                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                <div key={key} className='reactions__reactionEvent-element_specified_pair'>
                                     <p>{v.element}</p>
                                 </div>
                             )
                         } else {
                             return (
-                                <div className='reactions__reactionEvent-element_specified_pair'>
+                                <div key={key} className='reactions__reactionEvent-element_specified_pair'>
                                     <p>{v.element}</p>
                                     <div className='reactions__reactionEvent-element_specified_pair-index'>
                                         <p>{v.indexValue}</p>
@@ -167,10 +172,12 @@ const ReactionEvent = () => {
                 reaction.substances.map((substance) => {
                     substance.map((element) => {
                         substances = substances + 1;
-                        operatorsList.map((operatior) => {
-                            operatior.allSymbols.map((o) => {
-                                if (o.element === element.symbol && o.indexValue === element.amount && operatior.allSymbols.length === substance.length) {
+                        operatorsList.map((operator) => {
+                            let checkedSymbols = [];
+                            operator.allSymbols.map((o) => {
+                                if (o.element === element.symbol && o.indexValue === element.amount && operator.allSymbols.length === substance.length && !checkedSymbols.includes(o.element + o.indexValue)) {
                                     validElements = validElements + 1;
+                                    checkedSymbols.push(o.element + o.indexValue);
                                 }
                                 return (
                                     <></>
@@ -204,8 +211,7 @@ const ReactionEvent = () => {
                 allResults.map((result) => {
                     let littleList = [];
                     result.map((element) => {
-                        littleList.push(element.symbol);
-                        localStorage.setItem(`index${element.symbol}`, element.amount);
+                        littleList.push({elementSymbol: element.symbol, elementIndex: element.amount});
                         return (
                             <></>
                         )
@@ -247,18 +253,18 @@ const ReactionEvent = () => {
                         return (
                             <div key={elementList} className="reactions__reactionEvent-element_specified">
                                 {elementList.map((element) => {
-                                    if (localStorage.getItem(`index${element}`) === "1") {
+                                    if (element.elementIndex === 1) {
                                         return (
                                             <div className='reactions__reactionEvent-element_specified_pair'>
-                                                <p>{element}</p>
+                                                <p>{element.elementSymbol}</p>
                                             </div>
                                         )
                                     } else {
                                         return (
                                             <div className='reactions__reactionEvent-element_specified_pair'>
-                                                <p>{element}</p>
+                                                <p>{element.elementSymbol}</p>
                                                 <div className='reactions__reactionEvent-element_specified_pair-index'>
-                                                    <p>{localStorage.getItem(`index${element}`)}</p>
+                                                    <p>{element.elementIndex}</p>
                                                 </div>
                                             </div>
                                         )
@@ -275,18 +281,18 @@ const ReactionEvent = () => {
 
                                 <div className="reactions__reactionEvent-element_specified">
                                     {elementList.map((element) => {
-                                        if (localStorage.getItem(`index${element}`) === "1") {
+                                        if (element.elementIndex === 1) {
                                             return (
                                                 <div className='reactions__reactionEvent-element_specified_pair'>
-                                                    <p>{element}</p>
+                                                    <p>{element.elementSymbol}</p>
                                                 </div>
                                             )
                                         } else {
                                             return (
                                                 <div className='reactions__reactionEvent-element_specified_pair'>
-                                                    <p>{element}</p>
+                                                    <p>{element.elementSymbol}</p>
                                                     <div className='reactions__reactionEvent-element_specified_pair-index'>
-                                                        <p>{localStorage.getItem(`index${element}`)}</p>
+                                                        <p>{element.elementIndex}</p>
                                                     </div>
                                                 </div>
                                             )
@@ -318,7 +324,7 @@ const ReactionEvent = () => {
             return (
                 <div className='reactions__reactionEvent'>
                     <div className='reactions__reactionEvent-elementAmount'>
-                        <p>Vali elemendi indeks</p>
+                        <p>Vali indeks</p>
                         <div>
                             <input type='number' min={1} name='index' value={indexAmount} onChange={handleAmount} />
                         </div>
