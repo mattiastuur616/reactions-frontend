@@ -1,6 +1,26 @@
 .reactions__navbar {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center; 
+    justify-content: space-between;  
+
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.reactions__navbar-image img {
+    height: 5rem;
+    width: 5rem;
+
+    padding-left: 2rem;
+}
+
+.reactions__navbar-tyyr img {
+    height: 96px;
+    width: 128px;
+
+    padding-right: 2.5rem;
 }
 
 .reactions__navbar-items-title {

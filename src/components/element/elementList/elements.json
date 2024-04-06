@@ -2,591 +2,709 @@
     {
         "number": 1,
         "symbol": "H",
-        "name": "Vesinik"
+        "name": "Vesinik",
+        "type": "Mittemetall"
     },
     {
         "number": 2,
         "symbol": "He",
-        "name": "Heelium"
+        "name": "Heelium",
+        "type": "Väärisgaas"
     },
     {
         "number": 3,
         "symbol": "Li",
-        "name": "Liitium"
+        "name": "Liitium",
+        "type": "A- rühma metall"
     },
     {
         "number": 4,
         "symbol": "Be",
-        "name": "Berüllium"
+        "name": "Berüllium",
+        "type": "A- rühma metall"
     },
     {
         "number": 5,
         "symbol": "B",
-        "name": "Boor"
+        "name": "Boor",
+        "type": "Mittemetall"
     },
     {
         "number": 6,
         "symbol": "C",
-        "name": "Süsinik"
+        "name": "Süsinik",
+        "type": "Mittemetall"
     },
     {
         "number": 7,
         "symbol": "N",
-        "name": "Lämmastik"
+        "name": "Lämmastik",
+        "type": "Mittemetall"
     },
     {
         "number": 8,
         "symbol": "O",
-        "name": "Hapnik"
+        "name": "Hapnik",
+        "type": "Mittemetall"
     },
     {
         "number": 9,
         "symbol": "F",
-        "name": "Fluor"
+        "name": "Fluor",
+        "type": "Mittemetall"
     },
     {
         "number": 10,
         "symbol": "Ne",
-        "name": "Neoon"
+        "name": "Neoon",
+        "type": "Väärisgaas"
     },
     {
         "number": 11,
         "symbol": "Na",
-        "name": "Naatrium"
+        "name": "Naatrium",
+        "type": "A- rühma metall"
     },
     {
         "number": 12,
         "symbol": "Mg",
-        "name": "Magneesium"
+        "name": "Magneesium",
+        "type": "A- rühma metall"
     },
     {
         "number": 13,
         "symbol": "Al",
-        "name": "Allumiinium"
+        "name": "Allumiinium",
+        "type": "A- rühma metall"
     },
     {
         "number": 14,
         "symbol": "Si",
-        "name": "Räni"
+        "name": "Räni",
+        "type": "Mittemetall"
     },
     {
         "number": 15,
         "symbol": "P",
-        "name": "Fosfor"
+        "name": "Fosfor",
+        "type": "Mittemetall"
     },
     {
         "number": 16,
         "symbol": "S",
-        "name": "Väävel"
+        "name": "Väävel",
+        "type": "Mittemetall"
     },
     {
         "number": 17,
         "symbol": "Cl",
-        "name": "Kloor"
+        "name": "Kloor",
+        "type": "Mittemetall"
     },
     {
         "number": 18,
         "symbol": "Ar",
-        "name": "Argoon"
+        "name": "Argoon",
+        "type": "Väärisgaas"
     },
     {
         "number": 19,
         "symbol": "K",
-        "name": "Kaalium"
+        "name": "Kaalium",
+        "type": "A- rühma metall"
     },
     {
         "number": 20,
         "symbol": "Ca",
-        "name": "Kaltsium"
+        "name": "Kaltsium",
+        "type": "A- rühma metall"
     },
     {
         "number": 21,
         "symbol": "Sc",
-        "name": "Skandium"
+        "name": "Skandium",
+        "type": "B- rühma metall"
     },
     {
         "number": 22,
         "symbol": "Ti",
-        "name": "Titaan"
+        "name": "Titaan",
+        "type": "B- rühma metall"
     },
     {
         "number": 23,
         "symbol": "V",
-        "name": "Vanaadium"
+        "name": "Vanaadium",
+        "type": "B- rühma metall"
     },
     {
         "number": 24,
         "symbol": "Cr",
-        "name": "Kroom"
+        "name": "Kroom",
+        "type": "B- rühma metall"
     },
     {
         "number": 25,
         "symbol": "Mn",
-        "name": "Mangaan"
+        "name": "Mangaan",
+        "type": "B- rühma metall"
     },
     {
         "number": 26,
         "symbol": "Fe",
-        "name": "Raud"
+        "name": "Raud",
+        "type": "B- rühma metall"
     },
     {
         "number": 27,
         "symbol": "Co",
-        "name": "Koobalt"
+        "name": "Koobalt",
+        "type": "B- rühma metall"
     },
     {
         "number": 28,
         "symbol": "Ni",
-        "name": "Nikkel"
+        "name": "Nikkel",
+        "type": "B- rühma metall"
     },
     {
         "number": 29,
         "symbol": "Cu",
-        "name": "Vask"
+        "name": "Vask",
+        "type": "B- rühma metall"
     },
     {
         "number": 30,
         "symbol": "Zn",
-        "name": "Tsink"
+        "name": "Tsink",
+        "type": "B- rühma metall"
     },
     {
         "number": 31,
         "symbol": "Ga",
-        "name": "Gallium"
+        "name": "Gallium",
+        "type": "A- rühma metall"
     },
     {
         "number": 32,
         "symbol": "Ge",
-        "name": "Germaanium"
+        "name": "Germaanium",
+        "type": "A- rühma metall"
     },
     {
         "number": 33,
         "symbol": "As",
-        "name": "Arseen"
+        "name": "Arseen",
+        "type": "Mittemetall"
     },
     {
         "number": 34,
         "symbol": "Se",
-        "name": "Seleen"
+        "name": "Seleen",
+        "type": "Mittemetall"
     },
     {
         "number": 35,
         "symbol": "Br",
-        "name": "Broom"
+        "name": "Broom",
+        "type": "Mittemetall"
     },
     {
         "number": 36,
         "symbol": "Kr",
-        "name": "Krüptoon"
+        "name": "Krüptoon",
+        "type": "Väärisgaas"
     },
     {
         "number": 37,
         "symbol": "Rb",
-        "name": "Rubiidium"
+        "name": "Rubiidium",
+        "type": "A- rühma metall"
     },
     {
         "number": 38,
         "symbol": "Sr",
-        "name": "Strontsium"
+        "name": "Strontsium",
+        "type": "A- rühma metall"
     },
     {
         "number": 39,
         "symbol": "Y",
-        "name": "Ütrium"
+        "name": "Ütrium",
+        "type": "B- rühma metall"
     },
     {
         "number": 40,
         "symbol": "Zr",
-        "name": "Tsirkoonium"
+        "name": "Tsirkoonium",
+        "type": "B- rühma metall"
     },
     {
         "number": 41,
         "symbol": "Nb",
-        "name": "Nioobium"
+        "name": "Nioobium",
+        "type": "B- rühma metall"
     },
     {
         "number": 42,
         "symbol": "Mo",
-        "name": "Molübdeen"
+        "name": "Molübdeen",
+        "type": "B- rühma metall"
     },
     {
         "number": 43,
         "symbol": "Tc",
-        "name": "Tehneetsium"
+        "name": "Tehneetsium",
+        "type": "B- rühma metall"
     },
     {
         "number": 44,
         "symbol": "Ru",
-        "name": "Ruteenium"
+        "name": "Ruteenium",
+        "type": "B- rühma metall"
     },
     {
         "number": 45,
         "symbol": "Rh",
-        "name": "Roodium"
+        "name": "Roodium",
+        "type": "B- rühma metall"
     },
     {
         "number": 46,
         "symbol": "Pd",
-        "name": "Pallaadium"
+        "name": "Pallaadium",
+        "type": "B- rühma metall"
     },
     {
         "number": 47,
         "symbol": "Ag",
-        "name": "Hõbe"
+        "name": "Hõbe",
+        "type": "B- rühma metall"
     },
     {
         "number": 48,
         "symbol": "Cd",
-        "name": "Kaadmium"
+        "name": "Kaadmium",
+        "type": "B- rühma metall"
     },
     {
         "number": 49,
         "symbol": "In",
-        "name": "Indium"
+        "name": "Indium",
+        "type": "A- rühma metall"
     },
     {
         "number": 50,
         "symbol": "Sn",
-        "name": "Tina"
+        "name": "Tina",
+        "type": "A- rühma metall"
     },
     {
         "number": 51,
         "symbol": "Sb",
-        "name": "Antimon"
+        "name": "Antimon",
+        "type": "A- rühma metall"
     },
     {
         "number": 52,
         "symbol": "Te",
-        "name": "Telluur"
+        "name": "Telluur",
+        "type": "Mittemetall"
     },
     {
         "number": 53,
         "symbol": "I",
-        "name": "Jood"
+        "name": "Jood",
+        "type": "Mittemetall"
     },
     {
         "number": 54,
         "symbol": "Xe",
-        "name": "Ksenoon"
+        "name": "Ksenoon",
+        "type": "Väärisgaas"
     },
     {
         "number": 55,
         "symbol": "Cs",
-        "name": "Tseesium"
+        "name": "Tseesium",
+        "type": "A- rühma metall"
     },
     {
         "number": 56,
         "symbol": "Ba",
-        "name": "Baarium"
+        "name": "Baarium",
+        "type": "A- rühma metall"
     },
     {
         "number": 57,
         "symbol": "La",
-        "name": "Lantaan"
+        "name": "Lantaan",
+        "type": "B- rühma metall"
     },
     {
         "number": 58,
         "symbol": "Ce",
-        "name": "Tseerium"
+        "name": "Tseerium",
+        "type": "B- rühma metall"
     },
     {
         "number": 59,
         "symbol": "Pr",
-        "name": "Praseodüüm"
+        "name": "Praseodüüm",
+        "type": "B- rühma metall"
     },
     {
         "number": 60,
         "symbol": "Nd",
-        "name": "Neodüüm"
+        "name": "Neodüüm",
+        "type": "B- rühma metall"
     },
     {
         "number": 61,
         "symbol": "Pm",
-        "name": "Promeetium"
+        "name": "Promeetium",
+        "type": "B- rühma metall"
     },
     {
         "number": 62,
         "symbol": "Sm",
-        "name": "Samaarium"
+        "name": "Samaarium",
+        "type": "B- rühma metall"
     },
     {
         "number": 63,
         "symbol": "Eu",
-        "name": "Euroopium"
+        "name": "Euroopium",
+        "type": "B- rühma metall"
     },
     {
         "number": 64,
         "symbol": "Gd",
-        "name": "Gadoliinium"
+        "name": "Gadoliinium",
+        "type": "B- rühma metall"
     },
     {
         "number": 65,
         "symbol": "Tb",
-        "name": "Terbium"
+        "name": "Terbium",
+        "type": "B- rühma metall"
     },
     {
         "number": 66,
         "symbol": "Dy",
-        "name": "Düsproosium"
+        "name": "Düsproosium",
+        "type": "B- rühma metall"
     },
     {
         "number": 67,
         "symbol": "Ho",
-        "name": "Holmium"
+        "name": "Holmium",
+        "type": "B- rühma metall"
     },
     {
         "number": 68,
         "symbol": "Er",
-        "name": "Erbium"
+        "name": "Erbium",
+        "type": "B- rühma metall"
     },
     {
         "number": 69,
         "symbol": "Tm",
-        "name": "Tuulium"
+        "name": "Tuulium",
+        "type": "B- rühma metall"
     },
     {
         "number": 70,
         "symbol": "Yb",
-        "name": "Üterbium"
+        "name": "Üterbium",
+        "type": "B- rühma metall"
     },
     {
         "number": 71,
         "symbol": "Lu",
-        "name": "Luteetsium"
+        "name": "Luteetsium",
+        "type": "B- rühma metall"
     },
     {
         "number": 72,
         "symbol": "Hf",
-        "name": "Hafnium"
+        "name": "Hafnium",
+        "type": "B- rühma metall"
     },
     {
         "number": 73,
         "symbol": "Ta",
-        "name": "Tantaal"
+        "name": "Tantaal",
+        "type": "B- rühma metall"
     },
     {
         "number": 74,
         "symbol": "W",
-        "name": "Volfram"
+        "name": "Volfram",
+        "type": "B- rühma metall"
     },
     {
         "number": 75,
         "symbol": "Re",
-        "name": "Reenium"
+        "name": "Reenium",
+        "type": "B- rühma metall"
     },
     {
         "number": 76,
         "symbol": "Os",
-        "name": "Osmium"
+        "name": "Osmium",
+        "type": "B- rühma metall"
     },
     {
         "number": 77,
         "symbol": "Ir",
-        "name": "Iriidium"
+        "name": "Iriidium",
+        "type": "B- rühma metall"
     },
     {
         "number": 78,
         "symbol": "Pt",
-        "name": "Plaatina"
+        "name": "Plaatina",
+        "type": "B- rühma metall"
     },
     {
         "number": 79,
         "symbol": "Au",
-        "name": "Kuld"
+        "name": "Kuld",
+        "type": "B- rühma metall"
     },
     {
         "number": 80,
         "symbol": "Hg",
-        "name": "Elavhõbe"
+        "name": "Elavhõbe",
+        "type": "B- rühma metall"
     },
     {
         "number": 81,
         "symbol": "Tl",
-        "name": "Tallium"
+        "name": "Tallium",
+        "type": "A- rühma metall"
     },
     {
         "number": 82,
         "symbol": "Pb",
-        "name": "Plii"
+        "name": "Plii",
+        "type": "A- rühma metall"
     },
     {
         "number": 83,
         "symbol": "Bi",
-        "name": "Vismut"
+        "name": "Vismut",
+        "type": "A- rühma metall"
     },
     {
         "number": 84,
         "symbol": "Po",
-        "name": "Poloonium"
+        "name": "Poloonium",
+        "type": "A- rühma metall"
     },
     {
         "number": 85,
         "symbol": "At",
-        "name": "Astaat"
+        "name": "Astaat",
+        "type": "Mittemetall"
     },
     {
         "number": 86,
         "symbol": "Rn",
-        "name": "Radoon"
+        "name": "Radoon",
+        "type": "Väärisgaas"
     },
     {
         "number": 87,
         "symbol": "Fr",
-        "name": "Frantsium"
+        "name": "Frantsium",
+        "type": "A- rühma metall"
     },
     {
         "number": 88,
         "symbol": "Ra",
-        "name": "Raadium"
+        "name": "Raadium",
+        "type": "A- rühma metall"
     },
     {
         "number": 89,
         "symbol": "Ac",
-        "name": "Aktiinium"
+        "name": "Aktiinium",
+        "type": "B- rühma metall"
     },
     {
         "number": 90,
         "symbol": "Th",
-        "name": "Toorium"
+        "name": "Toorium",
+        "type": "B- rühma metall"
     },
     {
         "number": 91,
         "symbol": "Pa",
-        "name": "Protaktiinium"
+        "name": "Protaktiinium",
+        "type": "B- rühma metall"
     },
     {
         "number": 92,
         "symbol": "U",
-        "name": "Uraan"
+        "name": "Uraan",
+        "type": "B- rühma metall"
     },
     {
         "number": 93,
         "symbol": "Np",
-        "name": "Neptuunium"
+        "name": "Neptuunium",
+        "type": "B- rühma metall"
     },
     {
         "number": 94,
         "symbol": "Pu",
-        "name": "Plutoonium"
+        "name": "Plutoonium",
+        "type": "B- rühma metall"
     },
     {
         "number": 95,
         "symbol": "Am",
-        "name": "Ameriitsium"
+        "name": "Ameriitsium",
+        "type": "B- rühma metall"
     },
     {
         "number": 96,
         "symbol": "Cm",
-        "name": "Kuurium"
+        "name": "Kuurium",
+        "type": "B- rühma metall"
     },
     {
         "number": 97,
         "symbol": "Bk",
-        "name": "Berkeelium"
+        "name": "Berkeelium",
+        "type": "B- rühma metall"
     },
     {
         "number": 98,
         "symbol": "Cf",
-        "name": "Kalifornium"
+        "name": "Kalifornium",
+        "type": "B- rühma metall"
     },
     {
         "number": 99,
         "symbol": "Es",
-        "name": "Einsteinium"
+        "name": "Einsteinium",
+        "type": "B- rühma metall"
     },
     {
         "number": 100,
         "symbol": "Fm",
-        "name": "Fermium"
+        "name": "Fermium",
+        "type": "B- rühma metall"
     },
     {
         "number": 101,
         "symbol": "Md",
-        "name": "Mendeleevium"
+        "name": "Mendeleevium",
+        "type": "B- rühma metall"
     },
     {
         "number": 102,
         "symbol": "No",
-        "name": "Nobeelium"
+        "name": "Nobeelium",
+        "type": "B- rühma metall"
     },
     {
         "number": 103,
         "symbol": "Lr",
-        "name": "Lavrentsium"
+        "name": "Lavrentsium",
+        "type": "B- rühma metall"
     },
     {
         "number": 104,
         "symbol": "Rf",
-        "name": "Rutherfordium"
+        "name": "Rutherfordium",
+        "type": "B- rühma metall"
     },
     {
         "number": 105,
         "symbol": "Db",
-        "name": "Dubnium"
+        "name": "Dubnium",
+        "type": "B- rühma metall"
     },
     {
         "number": 106,
         "symbol": "Sg",
-        "name": "Seaborgium"
+        "name": "Seaborgium",
+        "type": "B- rühma metall"
     },
     {
         "number": 107,
         "symbol": "Bh",
-        "name": "Bohrium"
+        "name": "Bohrium",
+        "type": "B- rühma metall"
     },
     {
         "number": 108,
         "symbol": "Hs",
-        "name": "Hassium"
+        "name": "Hassium",
+        "type": "B- rühma metall"
     },
     {
         "number": 109,
         "symbol": "Mt",
-        "name": "Meitneerium"
+        "name": "Meitneerium",
+        "type": "B- rühma metall"
     },
     {
         "number": 110,
         "symbol": "Ds",
-        "name": "Darmstadtium"
+        "name": "Darmstadtium",
+        "type": "B- rühma metall"
     },
     {
         "number": 111,
         "symbol": "Rg",
-        "name": "Röntgeenium"
+        "name": "Röntgeenium",
+        "type": "B- rühma metall"
     },
     {
         "number": 112,
         "symbol": "Cn",
-        "name": "Koperniikium"
+        "name": "Koperniikium",
+        "type": "B- rühma metall"
     },
     {
         "number": 113,
         "symbol": "Nh",
-        "name": "Nihoonium"
+        "name": "Nihoonium",
+        "type": "B- rühma metall"
     },
     {
         "number": 114,
         "symbol": "Fl",
-        "name": "Fleroovium"
+        "name": "Fleroovium",
+        "type": "B- rühma metall"
     },
     {
         "number": 115,
         "symbol": "Mc",
-        "name": "Moskoovium"
+        "name": "Moskoovium",
+        "type": "B- rühma metall"
     },
     {
         "number": 116,
         "symbol": "Lv",
-        "name": "Livermoorium"
+        "name": "Livermoorium",
+        "type": "B- rühma metall"
     },
     {
         "number": 117,
         "symbol": "Ts",
-        "name": "Tennessiin"
+        "name": "Tennessiin",
+        "type": "B- rühma metall"
     },
     {
         "number": 118,
         "symbol": "Og",
-        "name": "Oganessoon"
+        "name": "Oganessoon",
+        "type": "B- rühma metall"
     }
 ]
