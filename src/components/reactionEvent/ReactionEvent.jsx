@@ -167,8 +167,9 @@ const ReactionEvent = () => {
 
         if (letItPass === true) {
             reactions.map((reaction) => {
-                let validElements = 0;
+                let validElements = [];
                 let substances = 0;
+                let finalCheck = true;
                 reaction.substances.map((substance) => {
                     substance.map((element) => {
                         substances = substances + 1;
@@ -176,7 +177,7 @@ const ReactionEvent = () => {
                             let checkedSymbols = [];
                             operator.allSymbols.map((o) => {
                                 if (o.element === element.symbol && o.indexValue === element.amount && operator.allSymbols.length === substance.length && !checkedSymbols.includes(o.element + o.indexValue)) {
-                                    validElements = validElements + 1;
+                                    validElements.push(o.element + o.indexValue);
                                     checkedSymbols.push(o.element + o.indexValue);
                                 }
                                 return (
@@ -195,7 +196,20 @@ const ReactionEvent = () => {
                         <></>
                     )
                 })
-                if (validElements === operatorsSize && validElements === substances) {
+                operatorsList.map((o) => {
+                    o.allSymbols.map((s) => {
+                        if (!validElements.includes(s.element + s.indexValue)) {
+                            finalCheck = false;
+                        }
+                        return (
+                            <></>
+                        )
+                    })
+                    return (
+                        <></>
+                    )
+                })
+                if (validElements.length === operatorsSize && validElements.length === substances && finalCheck === true) {
                     reaction.results.map((result) => {
                         allResults.push(result);
                         return (
