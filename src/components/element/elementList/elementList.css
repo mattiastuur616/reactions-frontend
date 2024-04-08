@@ -1,0 +1,62 @@
+.reactions__elementList {
+    background: linear-gradient(90deg, rgba(238, 235, 130, 1) 20%, rgba(0, 255, 145, 1) 80%);
+    
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.reactions__elementList-elements {
+    height: 45rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.reactions__elementList input {
+    color: rgb(206, 206, 206);
+    background: linear-gradient(0deg, rgba(0, 22, 255, 1) 0%, rgba(14, 249, 255, 1) 100%);
+
+    width: 16rem;
+    height: 3rem;
+
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    border-radius: 5rem;
+
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reactions__elementList input::placeholder {
+    color: rgb(206, 206, 206);
+}
+
+.reaction__elementList-searchBar {
+    display: flex;
+    flex-direction: row;
+}
+
+.reaction__elementList-filter {
+    color: blueviolet;
+
+    margin-top: 1.5rem;
+}
+
+.reaction__elementList-filter:hover {
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.reaction__elementList-filterbox {
+    background: blueviolet;
+    position: absolute;
+    
+    width: 15rem;
+    border-radius: 2rem;
+}
+
+.reactions__elementList-noResult {
+    margin-right: 9.1rem;
+    margin-left: 7rem;
+}
