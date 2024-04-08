@@ -8,6 +8,11 @@
 
 .reactions__reactionEvent-elementAmount {
     display: flex;
+    flex-direction: column;
+}
+
+.reactions__reactionEvent-elementAmount-indexCounter {
+    display: flex;
     flex-direction: row;
 }
 
@@ -30,13 +35,17 @@
     height: 2rem;
 }
 
+.reactions__reactionEvent-elementAmount p {
+    color: blueviolet;
+}
+
 .reactions__reactionEvent-operation {
     display: flex;
     flex-direction: row;
 }
 
-.reactions__reactionEvent-element_default {
-    margin-top: 5rem;
+.reactions__reactionEvent-element_default_2 {
+    margin-top: 1rem;
     margin-right: 4rem;
 
     color: blueviolet;
@@ -51,13 +60,33 @@
     font-size: 70px;
 }
 
-.reactions__reactionEvent-element_specified {
+.reactions__reactionEvent-element_default_3, .reactions__reactionEvent-element_default_4 {
+    margin-top: 4rem;
+    margin-right: 1.5rem;
+
+    color: blueviolet;
+    background: rgb(25, 26, 34);
+
+    width: 10rem;
+    height: 10rem;
+
+    border: 0.7rem solid rgb(159, 166, 248);
+    border-radius: 10rem;
+
+    font-size: 45px;
+}
+
+.reactions__reactionEvent-element_default_4 {
+    margin-right: 0.5rem;
+}
+
+.reactions__reactionEvent-element_specified_2, .reactions__reactionEvent-result_specified_1, .reactions__reactionEvent-result_specified_2 {
     display: flex;
     flex-direction: row;
 
     justify-content: center;
 
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-right: 4rem;
 
     color: white;
@@ -74,37 +103,179 @@
     cursor: pointer;
 }
 
+.reactions__reactionEvent-element_specified_3, .reactions__reactionEvent-element_specified_4, .reactions__reactionEvent-result_specified_3, .reactions__reactionEvent-result_specified_4 {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-top: 4rem;
+    margin-right: 1.5rem;
+
+    color: white;
+    background: linear-gradient(0deg, rgba(0, 22, 255, 1) 0%, rgba(14, 249, 255, 1) 100%);
+
+    width: 10rem;
+    height: 10rem;
+
+    border: 0.7rem solid rgb(159, 166, 248);
+    border-radius: 10rem;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+.reactions__reactionEvent-element_specified_4 {
+    margin-right: 0.5rem;
+}
+
+.reactions__reactionEvent-result_specified_1, .reactions__reactionEvent-result_specified_2 {
+    margin-top: 11rem;
+}
+
+.reactions__reactionEvent-result_specified_3 {
+    margin-top: 14rem;
+}
+
+.reactions__reactionEvent-result_specified_4 {
+    font-size: 40px;
+    margin-top: 14rem;
+    margin-right: 0.5rem;
+
+    width: 9rem;
+    height: 9rem;
+}
+
 .reactions__reactionEvent-element_specified_pair {
     display: flex;
     flex-direction: row;
 }
 
-.reactions__reactionEvent-element_specified_pair-index {
+.reactions__reactionEvent-element_specified_pair-index_2 {
     font-size: 25px;
     margin-top: 110px;
+}
+
+.reactions__reactionEvent-element_specified_pair-index_3, .reactions__reactionEvent-element_specified_pair-index_4 {
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+.reactions__reactionEvent-result_specified_pair-index_1, .reactions__reactionEvent-result_specified_pair-index_2 {
+    font-size: 30px;
+    margin-top: 105px;
+}
+
+.reactions__reactionEvent-result_specified_pair-index_3 {
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+.reactions__reactionEvent-result_specified_pair-index_4 {
+    font-size: 20px;
+    margin-top: 60px;
 }
 
 .reactions__reactionEvent-element:first-child {
     margin-left: 4rem;
 }
 
-.reactions__reactionEvent-connector {
-    margin-top: 6rem;
+.reactions__reactionEvent-connector_2, .reactions__reactionEvent-result-connector_2 {
+    margin-top: 2rem;
     margin-right: 4rem;
 
     font-size: 70px;
 }
 
-.reactions__reactionEvent-result_button {
-    margin-top: 6rem;
+.reactions__reactionEvent-connector_3 {
+    margin-top: 5rem;
+    margin-right: 2rem;
+
+    font-size: 45px;
+}
+
+.reactions__reactionEvent-connector_4 {
+    margin-top: 6.5rem;
+    margin-right: 0.5rem;
+
+    font-size: 30px;
+}
+
+.reactions__reactionEvent-result-connector_2 {
+    margin-top: 12rem;
+}
+
+.reactions__reactionEvent-result-connector_3 {
+    margin-top: 13rem;
+    margin-right: 1.5rem;
+
+    font-size: 4rem;
+}
+
+.reactions__reactionEvent-result-connector_4 {
+    margin-top: 16rem;
+    margin-right: 0.5rem;
+
+    font-size: 2rem;
+}
+
+.reactions__reactionEvent-result_button, .reactions__reactionEvent-result_finish_button {
+    margin-top: 2rem;
     margin-right: 4rem;
     font-size: 70px;
 
     cursor: pointer;
 }
 
+.reactions__reactionEvent-result_finish_button {
+    margin-top: 12rem;
+}
+
 .reactions__reactionEvent-error {
     margin-top: 2rem;
     margin-bottom: 1px;
     color: red;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 3.5rem;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter p {
+    font-size: 2.5rem;
+    color: red;
+    background: rgb(159, 166, 248);
+
+    border: 0.2rem solid rgb(0, 0, 0);
+    border-radius: 5rem;
+
+    width: 6rem;
+    height: 5rem;
+
+    padding-top: 1rem;
+    
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter h5 {
+    color: blueviolet;
+    margin-top: 4.5rem;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter p:hover {
+    cursor: pointer;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter p:last-child {
+    color: greenyellow;
+}
+
+.reactions__reactionEvent-elementAmount-slotCounter-button {
+    display: flex;
+    flex-direction: row;
 }

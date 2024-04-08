@@ -28,7 +28,7 @@
             [
                 {
                     "symbol": "O",
-                    "amount": 1
+                    "amount": 2
                 }
             ]
         ]
@@ -549,6 +549,126 @@
                 {
                     "symbol": "H",
                     "amount": 2
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": "1"
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": "3"
+                }
+            ],
+            [
+                {
+                    "symbol": "P",
+                    "amount": "1"
+                },
+                {
+                    "symbol": "O",
+                    "amount": "4"
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 3
+                },
+                {
+                    "symbol": "P",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 8
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "P",
+                    "amount": 1
+                }
+            ]
+        ]
+    },
+    {
+        "substances": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": "1"
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": "3"
+                }
+            ],
+            [
+                {
+                    "symbol": "P",
+                    "amount": "1"
+                },
+                {
+                    "symbol": "O",
+                    "amount": "4"
+                }
+            ],
+            [
+                {
+                    "symbol": "Fe",
+                    "amount": "2"
+                }
+            ]
+        ],
+        "results": [
+            [
+                {
+                    "symbol": "Pb",
+                    "amount": 3
+                },
+                {
+                    "symbol": "P",
+                    "amount": 2
+                },
+                {
+                    "symbol": "O",
+                    "amount": 8
+                }
+            ],
+            [
+                {
+                    "symbol": "H",
+                    "amount": 2
+                }
+            ],
+            [
+                {
+                    "symbol": "P",
+                    "amount": 1
+                }
+            ],
+            [
+                {
+                    "symbol": "Fe",
+                    "amount": 8
                 }
             ]
         ]

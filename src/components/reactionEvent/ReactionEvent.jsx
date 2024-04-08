@@ -6,8 +6,10 @@ import './reactionEvent.css';
 
 localStorage.setItem('savedList1', JSON.stringify([]));
 localStorage.setItem('savedList2', JSON.stringify([]));
+localStorage.removeItem('savedList3');
+localStorage.removeItem('savedList4');
 
-const operatorsList = [{
+let reloadedList = [{
         index: 1,
         allSymbols: []
     },
@@ -18,6 +20,13 @@ const operatorsList = [{
 ];
 
 const ReactionEvent = () => {
+    const [operatorsList, setOperatiorsList] = useState(reloadedList);
+
+    let defaultElement = `reactions__reactionEvent-element_default_${operatorsList.length}`;
+    let specifiedElement = `reactions__reactionEvent-element_specified_${operatorsList.length}`;
+    let connector = `reactions__reactionEvent-connector_${operatorsList.length}`;
+    let indexPos = `reactions__reactionEvent-element_specified_pair-index_${operatorsList.length}`;
+
     var arrow = '=>';
     var backArrow = '<=';
 
@@ -31,6 +40,10 @@ const ReactionEvent = () => {
 
     const [allResults, setAllResults] = useState([]);
     const [finalResult, setFinalResult] = useState([]);
+
+    let specifiedResult = `reactions__reactionEvent-result_specified_${finalResult.length}`;
+    let resultConnector = `reactions__reactionEvent-result-connector_${finalResult.length}`;
+    let resultIndexPos = `reactions__reactionEvent-result_specified_pair-index_${finalResult.length}`;
 
     const handleAmount = (e) => {
         const value = e.target.value;
@@ -91,10 +104,10 @@ const ReactionEvent = () => {
 
         return (
             <div>
-                {elementValues.length === 0 ? <div className="reactions__reactionEvent-element_default"
+                {elementValues.length === 0 ? <div className={defaultElement}
                 onClick={clearValue} 
                 onMouseUp={changeValue}><p>+</p></div> : 
-                <div className="reactions__reactionEvent-element_specified"
+                <div className={specifiedElement}
                 onClick={clearValue} 
                 onMouseUp={changeValue}>
                     {elementValues.map((v) => {
@@ -109,7 +122,7 @@ const ReactionEvent = () => {
                             return (
                                 <div key={key} className='reactions__reactionEvent-element_specified_pair'>
                                     <p>{v.element}</p>
-                                    <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                    <div className={indexPos}>
                                         <p>{v.indexValue}</p>
                                     </div>
                                 </div>
@@ -134,7 +147,7 @@ const ReactionEvent = () => {
                     } else {
                         return (
                             <div key={i.index} className='reactions__reactionEvent-operation'>
-                                <div className='reactions__reactionEvent-connector'>
+                                <div className={connector}>
                                     <p>+</p>
                                 </div>
                                 <Element index={i.index}/>
@@ -255,7 +268,7 @@ const ReactionEvent = () => {
         let number = 0;
         return (
             <div className='reactions__reactionEvent-operation'>
-                <div className='reactions__reactionEvent-result_button'>
+                <div className='reactions__reactionEvent-result_finish_button'>
                     <motion.p whileHover={{ color: "rgb(159, 166, 248)" }} onClick={BackToCreation}>{backArrow}</motion.p>
                 </div>
 
@@ -263,7 +276,7 @@ const ReactionEvent = () => {
                     if (number === 0) {
                         number = number + 1;
                         return (
-                            <div key={elementList} className="reactions__reactionEvent-element_specified">
+                            <div key={elementList} className={specifiedResult}>
                                 {elementList.map((element) => {
                                     if (element.elementIndex === 1) {
                                         return (
@@ -275,7 +288,7 @@ const ReactionEvent = () => {
                                         return (
                                             <div className='reactions__reactionEvent-element_specified_pair'>
                                                 <p>{element.elementSymbol}</p>
-                                                <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                                <div className={resultIndexPos}>
                                                     <p>{element.elementIndex}</p>
                                                 </div>
                                             </div>
@@ -287,11 +300,11 @@ const ReactionEvent = () => {
                     } else {
                         return (
                             <div key={elementList} className='reactions__reactionEvent-operation'>
-                                <div className='reactions__reactionEvent-connector'>
+                                <div className={resultConnector}>
                                     <p>+</p>
                                 </div>
 
-                                <div className="reactions__reactionEvent-element_specified">
+                                <div className={specifiedResult}>
                                     {elementList.map((element) => {
                                         if (element.elementIndex === 1) {
                                             return (
@@ -303,7 +316,7 @@ const ReactionEvent = () => {
                                             return (
                                                 <div className='reactions__reactionEvent-element_specified_pair'>
                                                     <p>{element.elementSymbol}</p>
-                                                    <div className='reactions__reactionEvent-element_specified_pair-index'>
+                                                    <div className={resultIndexPos}>
                                                         <p>{element.elementIndex}</p>
                                                     </div>
                                                 </div>
@@ -331,16 +344,74 @@ const ReactionEvent = () => {
         setPageStatus("start");
     }
 
+    function AddSlot() {
+        setAnimX(0);
+        setAnimOpacity(1);
+        if (operatorsList.length < 4) {
+            operatorsList.push({index: operatorsList.length + 1, allSymbols: []});
+            localStorage.setItem(`savedList${operatorsList.length}`, JSON.stringify([]));
+            operatorsList.push({index: operatorsList.length + 1, allSymbols: []});
+            setOperatiorsList(operatorsList.filter((o) => o.index !== operatorsList.length));
+            setErrorMsg("");
+        }
+    }
+
+    function RemoveSlot() {
+        setAnimX(0);
+        setAnimOpacity(1);
+        if (operatorsList.length > 2) {
+            setOperatiorsList(operatorsList.filter((o) => o.index !== operatorsList.length));
+            localStorage.removeItem(`savedList${operatorsList.length + 1}`);
+            setErrorMsg("");
+        }
+    }
+
+    const ShowButtons = () => {
+        if (operatorsList.length === 2) {
+            return (
+                <div className='reactions__reactionEvent-elementAmount-slotCounter'>
+                    <h5>Lisa või eemalda lünk:</h5>
+                    <div className='reactions__reactionEvent-elementAmount-slotCounter-button'>
+                        <motion.p whileHover={{ color: "rgb(159, 166, 248)", background: "greenyellow" }} onClick={AddSlot}>+1</motion.p>
+                    </div>
+                </div>
+            )
+        } else if (operatorsList.length === 4) {
+            return (
+                <div className='reactions__reactionEvent-elementAmount-slotCounter'>
+                    <h5>Lisa või eemalda lünk:</h5>
+                    <div className='reactions__reactionEvent-elementAmount-slotCounter-button'>
+                        <motion.p whileHover={{ color: "rgb(159, 166, 248)", background: "red" }} onClick={RemoveSlot}>-1</motion.p>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div className='reactions__reactionEvent-elementAmount-slotCounter'>
+                    <h5>Lisa või eemalda lünk:</h5>
+                    <div className='reactions__reactionEvent-elementAmount-slotCounter-button'>
+                        <motion.p whileHover={{ color: "rgb(159, 166, 248)", background: "red" }} onClick={RemoveSlot}>-1</motion.p>
+                        <motion.p whileHover={{ color: "rgb(159, 166, 248)", background: "greenyellow" }} onClick={AddSlot}>+1</motion.p>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     const ShowContent = () => {
         if (pageStatus === "start") {
             return (
                 <div className='reactions__reactionEvent'>
                     <div className='reactions__reactionEvent-elementAmount'>
-                        <p>Vali indeks</p>
-                        <div>
-                            <input type='number' min={1} name='index' value={indexAmount} onChange={handleAmount} />
+                        <div className='reactions__reactionEvent-elementAmount-indexCounter'>
+                            <p>Vali indeks</p>
+                            <div>
+                                <input type='number' min={1} name='index' value={indexAmount} onChange={handleAmount} />
+                            </div>
+                            <p>, mida järgnevalt lisatav element omandab</p>
                         </div>
-                        <p>, mida järgnevalt lisatav element omandab</p>
+
+                        <ShowButtons />
                     </div>
 
                     <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: animOpacity, x: animX }} transition={{ duration: 1.5 }} className='reactions__reactionEvent-operation'>
