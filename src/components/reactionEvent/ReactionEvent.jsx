@@ -55,10 +55,8 @@ const ReactionEvent = () => {
                 }
                 if (localStorage.getItem(`savedList${index.index}`).length === 0) {
                     setSymbol(amountValue);
-                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol") + amountValue);
                 } else {
                     setSymbol(symbol + localStorage.getItem("symbol") + amountValue);
-                    localStorage.setItem(`${index.index}`, localStorage.getItem("symbol") + amountValue);
                 }
 
                 operatorsList.map((i) => {
