@@ -9,5 +9,5 @@ This application can be a helpful tool to practice all the different reactions t
 
 ## Current status
 
-The project has a functioning user interface with some features implemented; however, the structure lacks a professional foundation, leaving significant room for improvement.
+The project has a functioning user interface with some features implemented. However, the structure lacks a professional foundation, leaving significant room for improvement.
 Development will continue once there is more time to focus on the project.
